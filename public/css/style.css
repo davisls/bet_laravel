@@ -1,0 +1,20 @@
+html, body {
+    background-color: rgb(119, 119, 119);
+}
+
+.card-personalizado {
+    background-color: rgb(184, 184, 184);
+    border-radius: 10px;
+}
+
+.nav-bg {
+    background-color: rgb(84, 148, 102);
+}
+
+.p-title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+}
