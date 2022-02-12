@@ -22,13 +22,13 @@
                     <p class="alert alert-success col-11 mx-auto">{{session('msg-success')}}</p>
                 @endif
 
-                <form action="/aposta/@yield('porcentagem')" method="POST" class="form-group text-center col-5 mx-auto">
+                <form action="/aposta/@yield('porcentagem')" method="POST" class="form-group text-center col-6 mx-auto">
                     @csrf
                     <input type="hidden" name="min" value="@yield('min')">
                     <input type="hidden" name="max" value="@yield('max')">
                     <input type="hidden" name="mult" value="@yield('mult')">
                     <input placeholder="Quantia à apostar" class="form-control mb-3" type="text" name="quantia">
-                    <input placeholder="Número da sorte" class="form-control mb-3" type="text" name="num_apostado">
+                    <input placeholder="Número da sorte ( Entre @yield('min') e @yield('max') )" class="form-control mb-3" type="text" name="num_apostado">
                     <button class="btn btn-dark form-control">Apostar</button>
                 </form>
             </div>

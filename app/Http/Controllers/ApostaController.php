@@ -14,15 +14,22 @@ class ApostaController extends Controller
         $aposta = new Aposta;
 
         $user = auth()->user();
-        $aposta->user_id = $user->id;
 
         $min = $request->min;
         $max = $request->max;
         $multiplicador = $request->mult;
-        $res = rand($min, $max);
-        $num_aposta = $request->num_apostado;
         $quantia = $request->quantia;
+        $num_aposta = $request->num_apostado;
+
+        $aposta->user_id = $user->id;
         $aposta->quantia_apostada = $quantia;
+        $aposta->mult = $multiplicador;
+
+        $res = rand($min, $max);
+
+        if($num_aposta < $min || $num_aposta > $max){
+            return back()->with('msg-failed', 'O Número apostado não é válido!');
+        }
 
         if($quantia > $user->money){
             return back()->with('msg-failed', 'Saldo insuficiente!');

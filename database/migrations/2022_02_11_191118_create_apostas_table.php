@@ -20,6 +20,7 @@ return new class extends Migration
             $table->boolean('win');
             $table->string('quantia_apostada');
             $table->string('saldo_pos_aposta');
+            $table->string('mult');
             $table->timestamps();
         });
     }
