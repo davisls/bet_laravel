@@ -82,7 +82,7 @@ class ApostaController extends Controller
 
     public function dashboard(){
         $user = auth()->user();
-        $apostas = Aposta::where('user_id', $user->id)->paginate(3);
+        $apostas = Aposta::where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(3);
         return view('dashboard', ['user' => $user, 'apostas' => $apostas]);
     }
 

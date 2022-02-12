@@ -27,8 +27,8 @@
                     <input type="hidden" name="min" value="@yield('min')">
                     <input type="hidden" name="max" value="@yield('max')">
                     <input type="hidden" name="mult" value="@yield('mult')">
-                    <input placeholder="Quantia à apostar" class="form-control mb-3" type="text" name="quantia">
-                    <input placeholder="Número da sorte ( Entre @yield('min') e @yield('max') )" class="form-control mb-3" type="text" name="num_apostado">
+                    <input autocomplete="off" placeholder="Quantia à apostar" class="form-control mb-3" type="text" name="quantia">
+                    <input autocomplete="off" placeholder="Número da sorte ( Entre @yield('min') e @yield('max') )" class="form-control mb-3" type="text" name="num_apostado">
                     <button class="btn btn-dark form-control">Apostar</button>
                 </form>
             </div>
