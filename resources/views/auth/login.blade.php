@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-5 mx-auto mt-5">
                 <div class="card ">
-                    <div class="card-body">
+                    <div class="card-body card-personalizado text-white">
                         @if (session('status'))
                             <div class="mb-4 font-medium text-sm text-green-600">
                                 {{ session('status') }}
@@ -40,7 +40,7 @@
                                     {{ __('Entrar') }}
                                 </x-jet-button>
                                 @if (Route::has('password.request'))
-                                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                    <a class="text-white" href="{{ route('password.request') }}">
                                         {{ __('Esqueceu sua senha?') }}
                                     </a>
                                 @endif

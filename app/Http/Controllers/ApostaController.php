@@ -21,6 +21,7 @@ class ApostaController extends Controller
         $quantia = $request->quantia;
         $num_aposta = $request->num_apostado;
 
+        $aposta->saldo_antes_aposta = $user->money;
         $aposta->user_id = $user->id;
         $aposta->quantia_apostada = $quantia;
         $aposta->mult = $multiplicador;

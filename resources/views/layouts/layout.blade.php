@@ -12,40 +12,42 @@
 
         <header>
 
-            <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+            <nav class="navbar navbar-expand-lg nav-bg">
 
-                <a class="navbar-brand" href="/">Logo</a>
+                <a class="navbar-brand nav-logo" href="/">RandBet</a>
 
-                <ul class="navbar-nav ml-auto">
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login">Entrar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register">Cadastrar-se</a>
-                        </li>
-                    @endguest
-                    @auth
-                        <li class="nav-item">
-                            <p class="nav-link">R${{$user->money}}</p>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">Histórico</a>
-                        </li>
-                        <li class="nav-item">
-                            <form action="/logout" method="POST">
-                                @csrf
-                                <a href="/logout"
-                                    class="nav-link"
-                                    onclick="event.preventDefault();
-                                    this.closest('form').submit()"
-                                >
-                                Sair
-                                </a>
-                            </form>
-                        </li>
-                    @endauth
-                </ul>
+                <div class="ml-auto">
+                    <ul class="navbar-nav">
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link link-nav mx-1" href="/login">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-nav mx-1" href="/register">Cadastrar-se</a>
+                            </li>
+                        @endguest
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link link-nav mx-1">R${{$user->money}}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-nav mx-1" href="/dashboard">Histórico</a>
+                            </li>
+                            <li class="nav-item">
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <a href="/logout"
+                                        class="nav-link link-nav mx-1"
+                                        onclick="event.preventDefault();
+                                        this.closest('form').submit()"
+                                    >
+                                    Sair
+                                    </a>
+                                </form>
+                            </li>
+                        @endauth
+                    </ul>
+                </div>
             </nav>
 
         </header>

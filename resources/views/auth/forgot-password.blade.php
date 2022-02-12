@@ -8,8 +8,8 @@
     <div class="container">
         <div class="row">
             <div class="col-5 mx-auto mt-5">
-                <div class="card ">
-                    <div class="card-body">
+                <div class="card text-white">
+                    <div class="card-body card-personalizado">
                         <div class="mb-4 text-sm text-gray-600">
                             {{ __('Esqueceu sua senha? Sem problemas. Apenas nos informe seu endereço de e-mail e nós iremos te enviar um link com a sua senha e uma opção para alterá-la.') }}
                         </div>

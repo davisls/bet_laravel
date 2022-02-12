@@ -7,8 +7,8 @@
     <div class="container">
         <div class="row">
             <div class="col-5 mx-auto mt-5">
-                <div class="card ">
-                    <div class="card-body">
+                <div class="card text-white">
+                    <div class="card-body card-personalizado">
                         <form class="form-group" method="POST" action="{{ route('register') }}">
                             @csrf
 
@@ -53,7 +53,7 @@
                                 <x-jet-button class="btn btn-dark btn-block mb-3">
                                     {{ __('Registrar-se') }}
                                 </x-jet-button>
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                                <a class="text-white" href="{{ route('login') }}">
                                     {{ __('Já tem registro?') }}
                                 </a>
                             </div>

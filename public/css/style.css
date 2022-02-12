@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Raleway:wght@200&family=Rubik:wght@300&display=swap');
 html, body {
-    background-color: rgb(119, 119, 119);
+    font-family: Rubik;
+    background-color: rgb(160, 154, 187);
 }
 
 .card-personalizado {
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(111, 106, 128);
     border-radius: 10px;
 }
 
 .nav-bg {
-    background-color: rgb(84, 148, 102);
+    background-color: rgb(221, 221, 221);
 }
 
 .p-title {
@@ -16,5 +18,28 @@ html, body {
     text-align: center;
     font-size: 1.1em;
     font-weight: bold;
-    color: black;
+    color: rgb(255, 255, 255);
+}
+
+.link-nav {
+    color: rgb(111, 106, 128);
+    font-size: 1.1em;
+}
+
+.link-nav:hover {
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+}
+
+.nav-logo {
+    color: rgb(111, 106, 128);
+    font-size: 1.2em;
+}
+
+.text-failed {
+    color: rgb(250, 100, 100);
+}
+
+.text-sucesso {
+    color: rgb(114, 255, 137);
 }
