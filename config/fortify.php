@@ -61,8 +61,18 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    'home' => function(){
+        //if you want to go to a specific route
+        return route('/');
 
+        //or if you have a bunch of redirection options
+        // if (Auth::user()->hasRole('admin')) {
+        //    return route('admin.dashboard');
+        // }
+        // else{
+        //    return route('guest.dashboard');
+        // }
+    },
     /*
     |--------------------------------------------------------------------------
     | Fortify Routes Prefix / Subdomain

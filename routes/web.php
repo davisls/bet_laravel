@@ -15,7 +15,7 @@ use App\Http\Controllers\ApostaController;
 |
 */
 
-Route::get('/', [HomeController::class, ('index')]);
+Route::get('/', [HomeController::class, ('index')])->name('/');
 
 Route::get('/aposta_cinquenta', [ApostaController::class, ('cinquenta')])->middleware('auth');
 Route::post('/aposta/cinquenta', [ApostaController::class, ('aposta')])->middleware('auth');
